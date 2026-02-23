@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qi Gong met Carla</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --roze: #F6C1CF;
+            --donkerroze: #E89AB0;
+            --goud: #C6A75E;
+            --creme: #FDF8F3;
+            --donker: #3A3A3A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--creme);
+            color: var(--donker);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--goud);
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 25px;
+            color: var(--donker);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--goud);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--roze), white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+
+        .text-aanbod {
+            text-align: justify;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: var(--goud);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b5944c;
+        }
+
+        section {
+            padding: 80px 20px 20px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section .hero {
+            max-width: 100vw;
+
+        }
+
+        section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 32px;
+            color: var(--goud);
+        }
+
+        section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: bold;
+            /* text-align: center; */
+            margin-bottom: 16px;
+            margin-top: 16px;
+            color: var(--goud);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            color: var(--donkerroze);
+        }
+
+        .about {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <!-- Flamingo SVG Logo -->
+            <svg viewBox="0 0 64 64" fill="none" stroke="#C6A75E" stroke-width="2">
+                <path d="M40 10c-8 0-14 6-14 14 0 6 4 10 8 12v8h-6v4h20v-4h-6v-10c6-2 10-8 10-14 0-10-6-18-12-18z"
+                    stroke="#F6C1CF" />
+                <path d="M26 24c0-6 6-10 10-10" />
+            </svg>
+            <h1>Qi Gong met Carla</h1>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#aanbod">Aanbod</a>
+            <a href="#over">Over mij</a>
+            <a href="#qigong">Chi Neng Qigong</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Rust, energie en herstel van binnenuit door bewegen met aandacht</h2>
+        <p>Ik ben een gecertificeerde instructrice Chi Neng Qigong en geef les in Heiloo en omgeving in kleine, veilige
+            groepen.</p>
+        <a href="#aanbod" class="btn">Bekijk het aanbod</a>
+    </section>
+
+    <section id="aanbod">
+        <h3>Aanbod</h3>
+        <p class="text-aanbod">In de lessen starten we met een warming up van ongeveer 10 minuten, waarin we de aandacht
+            naar het lichaam brengen en het activeren met rustige bewegingen. Daarna volgen er oefeningen met vloeiende
+            bewegingen, waarbij de aandacht afwisselend van buiten naar binnen gaat. Door de oefeningen ontstaat een
+            diepe fysieke en mentale ontspanning, die leidt tot stressvermindering en een basis voor lichamelijk
+            herstel. De bewegingen zijn heel eenvoudig (eenvoudiger dan bij Tai Chi en Yoga) en worden veelal staand en
+            soms ook zittend uitgevoerd, meestal in stilte en soms met meditatieve achtergrondmuziek. Na afloop zitten
+            we even rustig na met een kop thee. Dan bespreken we soms ook kort de theorie bij de oefeningen.
+            In de lessen is het fijn als je makkelijk zittende kleding aantrekt (hoeft geen sportkleding te zijn) en een
+            paar warme antislipsokken of zachte binnenschoenen.
+            In de lessen krijg je tools om ook thuis te oefenen. Met 3 keer per week een kwartier oefenen ervaar je al
+            minder stress en meer energie. Daarnaast verbetert je spierkracht, balans en flexibiliteit.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h4>Wekelijkse lessen</h4>
+                <p>Toegankelijke Qi Gong lessen voor ontspanning en energie. Geschikt voor beginners en gevorderden. De
+                    lessen zijn op donderdagavond in het Chiron instituut in Heiloo van 19.00 uur tot 20.15 uur. </p>
+                <p>Kosten bedragen 72 euro voor 6 lessen</p>
+            </div>
+            <div class="card">
+                <h4>Privélessen</h4>
+                <p>Persoonlijke begeleiding afgestemd op jouw behoeften en tempo.</p>
+                <p>Kosten bedragen 45 euro per uur</p>
+            </div>
+            <div class="card">
+                <h4>Workshops</h4>
+                <p>Themaworkshops zoals stress loslaten, energie opbouwen en balans herstellen.</p>
+                <p>Kosten op aanvraag</p>
+            </div>
+        </div>
+        <p class="text-aanbod">Je kunt je aanmelden voor een gratis proefles. Als je de lessen daarna wilt volgen, kun je een abonnement
+            nemen voor 6 weken. Dan heb je een goed idee wat de lessen inhouden en wat de werking daarvan voor jou is.
+            De kosten daarvan bedragen € 72 ( 7 weken geldig). Daarna kun je per 6 weken iedere keer verlengen. </p>
+    </section>
+
+    <section id="over">
+        <h3>Over mij</h3>
+        <div class="about">
+            <p>Qi Gong heeft mij geholpen om rust en balans te vinden in het dagelijks leven.
+                In mijn lessen staat zachtheid, veiligheid en persoonlijke aandacht centraal.
+                Ik begeleid je graag in het ontdekken van jouw innerlijke kracht en energie.</p>
+        </div>
+    </section>
+
+    <section id="qigong">
+        <h3>Wat is Chi Neng Qigong?</h3>
+        <div class="about">
+            <p>Chi Neng Qigong is een eeuwenoude Chinese oefenmethode: een vorm van 'meditatie in beweging', die bestaat
+                uit trage, vloeiende bewegingen uitgevoerd met focus om de levensenergie (Qi) te laten stromen. Hierdoor
+                kalmeert het zenuwstelsel, vermindert stress, en verbeteren zowel de fysieke balans als de mentale
+                helderheid.</p>
+            <h4>Voor wie?</h4>
+            <p>De eenvoudige en zeer effectieve oefeningen zijn geschikt voor mensen van alle leeftijden en
+                gezondheidsniveaus. De oefeningen zijn extra geschikt bij burn-out, stressklachten, vermoeidheid of
+                lichamelijk herstel.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <div class="about">
+            <p>Voor vragen en aanmeldingen, stuur een mail naar: qigongmetcarla.nl</p>
+            <p>Adres Chiron instituut: Chiron Instituut, Hoefsmid 3, 1851 PZ, Heiloo.</p>
+        </div>
+        <!-- <form>
+        <input type="text" placeholder="Naam" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Bericht"></textarea>
+        <button class="btn" type="submit">Verstuur</button>
+    </form> -->
+    </section>
+
+    <footer>
+        © 2026 Qi Gong met Carla – Alle rechten voorbehouden
+    </footer>
+
+</body>
+
+</html>
