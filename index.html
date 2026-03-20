@@ -1,317 +1,256 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qi Gong met Carla</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Qigong met Carla is een informatieve website over de inhoud en lestijden van Qigonglessen, gegeven door Carla." />
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet">
+  <!-- Always include this line of code-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        :root {
-            --roze: #F6C1CF;
-            --donkerroze: #E89AB0;
-            --goud: #C6A75E;
-            --creme: #FDF8F3;
-            --donker: #3A3A3A;
-        }
+  <link rel="icon" href="img/cranebird2.png" />
+  <link rel="apple-touch-icon" href="img/cranebird2.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/queries.css" />
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--creme);
-            color: var(--donker);
-            line-height: 1.6;
-        }
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 
-        header {
-            background: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  <script defer src="js/script.js"></script>
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: var(--goud);
-        }
-
-        nav a {
-            text-decoration: none;
-            margin-left: 25px;
-            color: var(--donker);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--goud);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--roze), white);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-
-        .text-aanbod {
-            text-align: justify;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin: auto;
-            font-size: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: var(--goud);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #b5944c;
-        }
-
-        section {
-            padding: 80px 20px 20px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        section .hero {
-            max-width: 100vw;
-
-        }
-
-        section h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            text-align: center;
-            margin-bottom: 32px;
-            color: var(--goud);
-        }
-
-        section h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            font-weight: bold;
-            /* text-align: center; */
-            margin-bottom: 16px;
-            margin-top: 16px;
-            color: var(--goud);
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .card h4 {
-            margin-bottom: 10px;
-            color: var(--donkerroze);
-        }
-
-        .about {
-            text-align: center;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-            margin: auto;
-        }
-
-        input,
-        textarea {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-family: inherit;
-        }
-
-        textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        footer {
-            background: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            font-size: 14px;
-            color: #888;
-        }
-
-        svg {
-            width: 40px;
-            height: 40px;
-        }
-    </style>
+  <title>Qigong met Carla &mdash; Rust in je hoofd en lichaam!</title>
 </head>
 
 <body>
+  <!-- NavigationBar -->
+  <header class="header">
+    <a href="#home">
+      <img class="logo" alt="Qigong met Carla" src="img/logohorizontal.png" />
+    </a>
 
-    <header>
-        <div class="logo">
-            <!-- Flamingo SVG Logo -->
-            <svg viewBox="0 0 64 64" fill="none" stroke="#C6A75E" stroke-width="2">
-                <path d="M40 10c-8 0-14 6-14 14 0 6 4 10 8 12v8h-6v4h20v-4h-6v-10c6-2 10-8 10-14 0-10-6-18-12-18z"
-                    stroke="#F6C1CF" />
-                <path d="M26 24c0-6 6-10 10-10" />
-            </svg>
-            <h1>Qi Gong met Carla</h1>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#aanbod">Aanbod</a></li>
+        <li><a class="main-nav-link" href="#over">Over mij</a></li>
+        <li><a class="main-nav-link" href="#qigong">Chi Neng Qigong</a></li>
+        <li><a class="main-nav-link" href="#contact">Contact</a></li>
+        <!-- <li><a class="main-nav-link nav-cta" href="#cta">Contact</a></li> -->
+      </ul>
+    </nav>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </header>
+
+
+  <main>
+    <!-- Hero-->
+    <section class="section-hero">
+      <div class="hero">
+        <div class="hero-text-box">
+          <h1 class="heading-primary">
+            Rust, energie en herstel van binnenuit door bewegen met aandacht
+          </h1>
+          <p class="hero-description">
+            Ik ben een gecertificeerde instructrice Chi Neng Qigong en geef les in Heiloo en omgeving in kleine, veilige
+            groepen.
+          </p>
+          <a href="#contact" class="btn btn--full margin-right-sm">Contact</a>
+
         </div>
+        <div class="hero-img-box">
+          <picture>
+            <!--  <source srcset="img/hero.webp" type="image/webp" />-->
+            <source srcset="img/fotohome.jpg" type="image/jpg" />
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#aanbod">Aanbod</a>
-            <a href="#over">Over mij</a>
-            <a href="#qigong">Chi Neng Qigong</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <h2>Rust, energie en herstel van binnenuit door bewegen met aandacht</h2>
-        <p>Ik ben een gecertificeerde instructrice Chi Neng Qigong en geef les in Heiloo en omgeving in kleine, veilige
-            groepen.</p>
-        <a href="#aanbod" class="btn">Bekijk het aanbod</a>
+            <img src="img/fotohome.jpg" class="hero-img" alt="Vrouw die op een gong slaat" />
+          </picture>
+        </div>
+      </div>
     </section>
 
-    <section id="aanbod">
-        <h3>Aanbod</h3>
-        <div class="cards">
-            <div class="card">
-                <h4>Wekelijkse lessen</h4>
-                <p>Toegankelijke Qi Gong lessen voor ontspanning en energie. Geschikt voor beginners en gevorderden. De
-                    lessen zijn op donderdagavond in het Chiron instituut in Heiloo van 19.00 uur tot 20.15 uur. </p>
-                <p>Kosten bedragen 72 euro voor 6 lessen</p>
-            </div>
-            <div class="card">
-                <h4>Privélessen</h4>
-                <p>Persoonlijke begeleiding afgestemd op jouw behoeften en tempo.</p>
-                <p>Kosten bedragen 45 euro per uur</p>
-            </div>
-            <div class="card">
-                <h4>Workshops</h4>
-                <p>Themaworkshops zoals stress loslaten, energie opbouwen en balans herstellen.</p>
-                <p>Kosten op aanvraag</p>
-            </div>
+    <!-- Over Chineng Qigong-->
+    <section class="section-how" id="how">
+
+      <div class="container grid grid--2-cols2 grid--center-v">
+        <div class="container" id="qigong">
+          <p class="step-number">Chi Neng Qigong</p>
+          <span class="subheading">Wat is Chi Neng Qigong</span>
+          <p class="step-description">
+            Chi Neng Qigong is een eeuwenoude Chinese oefenmethode: een vorm van 'meditatie in beweging', die bestaat
+            uit
+            trage, vloeiende bewegingen uitgevoerd met focus om de levensenergie (Qi) te laten stromen. Hierdoor
+            kalmeert
+            het zenuwstelsel, vermindert stress, en verbeteren zowel de fysieke en mentale balans.
+          </p>
+          <span class="subheading">VOor wie</span>
+          <p class="step-description">
+            De eenvoudige en zeer effectieve oefeningen zijn geschikt voor mensen van alle leeftijden en
+            gezondheidsniveaus.
+            De oefeningen zijn extra geschikt bij burn-out, stressklachten, vermoeidheid of lichamelijk herstel.
+          </p>
         </div>
-         <p class="text-aanbod">In de lessen starten we met een warming up van ongeveer 10 minuten, waarin we de aandacht
-            naar het lichaam brengen en het activeren met rustige bewegingen. Daarna volgen er oefeningen met vloeiende
-            bewegingen, waarbij de aandacht afwisselend van buiten naar binnen gaat. Door de oefeningen ontstaat een
-            diepe fysieke en mentale ontspanning, die leidt tot stressvermindering en een basis voor lichamelijk
-            herstel. De bewegingen zijn heel eenvoudig (eenvoudiger dan bij Tai Chi en Yoga) en worden veelal staand en
-            soms ook zittend uitgevoerd, meestal in stilte en soms met meditatieve achtergrondmuziek. Na afloop zitten
-            we even rustig na met een kop thee. Dan bespreken we soms ook kort de theorie bij de oefeningen.
+
+        <div class="step-img-box">
+          <img src="img/cranebird2.png" class="step-img" alt="iPhone app
+                  delivery screen" />
+        </div>
+      </div>
+
+
+      <div class="container grid grid--2-cols2 grid--center-v">
+        <div class="container" id="aanbod">
+          <p class="step-number margin-top-md">Aanbod</p>
+          <span class="subheading">Lesrooster</span>
+          <p class="step-description">
+            Op donderdagavond (19:00) en woensdagochtend (10.00 uur) geef ik Chi Neng Qi Gong lessen in het Chiron
+            instituut in
+            Heiloo. Bij mooi weer gaan we naar buiten. De lessen starten per 15 april 2026.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Maandag</th>
+                <th>Dinsdag</th>
+                <th>Woensdag</th>
+                <th>Donderdag</th>
+                <th>Vrijdag</th>
+                <th>Zaterdag</th>
+                <th>Zondag</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>x</td>
+                <td>10:00 - 11:15</td>
+                <td>19:00 - 20:15</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <p class="step-description text-bold margin-top-sm">
+            Ik geef speciale introductielessen op de volgende tijdstippen:
+          </p>
+          <ul class="step-description">
+            <li>Woensdagochtend 15 april om 10.00 uur</li>
+            <li>Donderdagavond 16 april om 19.00 uur</li>
+          </ul>
+          <span class="subheading">Tarieven</span>
+          <p class="step-description">
+            De eerste (proef)les is gratis. Maak kennis met Chi Neng Qigong, ervaar de krachtige werking en ontdek wat
+            het
+            voor jou kan doen!
+
+          <ul class="step-description">
+            <li>Losse les = 13 euro</li>
+            <li>8-Rittenkaart = 100 euro</li>
+          </ul>
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img src="img/fotozaal.jpeg" class="step-img" alt="Qigong les" />
+        </div>
+      </div>
+
+      <div class="container grid grid--1-cols grid--center-v">
+        <div class="container">
+          <span class="subheading">Inhoud lessen</span>
+          <p class="step-description">
+            In de lessen starten we met een warming up van ongeveer 10 minuten, waarin we de aandacht naar het lichaam
+            brengen en het activeren met rustige bewegingen. Daarna volgen er oefeningen met vloeiende bewegingen,
+            waarbij
+            de aandacht afwisselend van buiten naar binnen gaat. Door de oefeningen ontstaat een diepe fysieke en
+            mentale
+            ontspanning, die leidt tot stressvermindering en een basis voor lichamelijk herstel. De bewegingen zijn heel
+            eenvoudig (eenvoudiger dan bij Tai Chi en Yoga) en worden veelal staand en soms ook zittend uitgevoerd,
+            meestal in stilte en soms met meditatieve muziek. Na afloop zitten we even rustig na met een kop thee. Dan
+            bespreken we soms ook de theorie bij de oefeningen.
             In de lessen is het fijn als je makkelijk zittende kleding aantrekt (hoeft geen sportkleding te zijn) en een
             paar warme antislipsokken of zachte binnenschoenen.
             In de lessen krijg je tools om ook thuis te oefenen. Met 3 keer per week een kwartier oefenen ervaar je al
-            minder stress en meer energie. Daarnaast verbetert je spierkracht, balans en flexibiliteit.
-            
+            minder stress en meer energie. Daarnaast verbeteren je spierkracht, balans en flexibiliteit.
+          </p>
+        </div>
+      </div>
+
+      <div class="container grid grid--2-cols2 grid--center-v">
+        <div class="container" id="over">
+          <p class="step-number margin-top-md">Over mij</p>
+          <span class="subheading">De rode draad</span>
+          <p class="step-description">
+            De rode draad in mijn leven is het in beweging brengen van mensen. Na mijn opleiding aan de Academie voor
+            Lichamelijk Opvoeding, heb ik ruim 15 jaar gymlessen gegeven aan kinderen op scholen van basis- en
+            voortgezet onderwijs en bewegingslessen aan ouderen. Daarna ben ik lange tijd werkzaam geweest bij gemeenten
+            o.a. als beleidsadviseur sport (accommodaties).
+          </p>
+          <span class="subheading">Herstel</span>
+          <p class="step-description">
+            Zelf was ik ook altijd in beweging, door heel veel sporten, veel werken en een druk gezin, maar op een
+            gegeven moment werd ik door een zware hernia, letterlijk tot stilstand gedwongen. Na een korte
+            herstelperiode kon ik weer redelijk bewegen, maar mijn voornamelijk zittende en veeleisende werk hielpen mij
+            niet bij mijn verdere herstel. Ik besloot mijn baan op te zeggen en mij volledig op mijn herstel te richten.
+            Ik kwam in 2024 in aanraking met Chi Neng Qigong en merkte door de dagelijks beoefening daarvan dat ik niet
+            alleen soepeler werd in mijn rug, maar dat ik letterlijk en figuurlijk ook veel steviger in mijn schoenen
+            ging staan. Ik kreeg veel meer balans in mijn lijf, rust in mijn hoofd en inzicht en regie over mijn
+            emoties. Bij het Chi Neng instituut in Arnhem heb ik het instructeursdiploma behaald. Nu vind ik het heel
+            fijn om weer les te geven, mensen kennis te laten maken met Chi Neng Qigong en ze mee te nemen in de reis
+            naar binnen die zoveel brengt.
+            <br> <br> Hao La ! (Het is goed en het wordt beter!)
+            <br> Carla Laan
+          </p>
+        </div>
+
+        <div class="step-img-box">
+          <img src="img/fotocloseup.jpeg" class="step-img" alt="iPhone app
+                  delivery screen" />
+        </div>
+      </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container grid grid--2-cols">
+      <div class="logo-col">
+        <a href="#" class="footer-logo" >
+          <img class="logo" alt="Qigong met Carla" src="img/logohorizontal.png" />
+        </a>
+
+        <p class="copyright">
+          Copyright &copy; <span class="year">2026</span> Qigong met Carla
         </p>
-        <p class="text-aanbod">Je kunt je aanmelden voor een gratis proefles. Als je de lessen daarna wilt volgen, kun je een abonnement
-            nemen voor 6 weken. Dan heb je een goed idee wat de lessen inhouden en wat de werking daarvan voor jou is.
-            De kosten daarvan bedragen € 72 ( 7 weken geldig). Daarna kun je per 6 weken iedere keer verlengen. </p>
-    </section>
+      </div>
 
-    <section id="over">
-        <h3>Over mij</h3>
-        <div class="about">
-            <p>De rode draad in mijn leven is het in beweging brengen van mensen: de eerste 15 jaar na mijn opleiding aan de Academie voor Lichamelijk Opvoeding, door het geven van gymlessen aan kinderen op scholen van basis- en voortgezet onderwijs en bewegingslessen aan ouderen. 
-                Daarna lange tijd door mijn werk als beleidsadviseur sport (accommodaties) bij gemeenten. Zelf was ik ook altijd in beweging, door heel veel sporten, veel werken en een druk gezin, maar op een gegeven moment werd ik door een zware hernia, letterlijk tot stilstand gedwongen. 
-                Na een korte herstelperiode kon ik weer redelijk bewegen, maar mijn voornamelijk zittende en veeleisende werk hielpen mij niet bij mijn verdere herstel. Ik besloot mijn baan op te zeggen en mij volledig op mijn herstel te richten. 
-                Ik kwam in 2024 in aanraking met Chi Neng Qigong en merkte door de dagelijks beoefening daarvan dat ik niet alleen soepeler werd in mijn rug, maar dat ik letterlijk en figuurlijk ook veel steviger in mijn schoenen ging staan. 
-                Ik kreeg veel meer balans in mijn lijf, rust in mijn hoofd en inzicht en regie over mijn emoties. Bij het Chi Neng instituut in Arnhem heb ik het instructeursdiploma behaald. 
-                Nu vind ik het heel fijn om weer les te geven, mensen kennis te laten maken met Chi Neng Qigong en mee te nemen in de reis naar binnen die zoveel brengt. </p>
-        </div>
-    </section>
+      <div class="address-col">
+        <p class="footer-heading">Contact</p>
+        <address class="contacts">
+          <p class="address">
+            De lessen worden gegeven in het Chiron instituut: Hoefsmid 3, 1851 PZ, Heiloo. <br><br>
+            Stuur een mail om je aan te melden voor de introductielessen of de reguliere lessen naar: <a
+              class="footer-link" href="mailto:qigongmetcarla@gmail.com">qigongmetcarla@gmail.com</a>
+          </p>
+        </address>
+      </div>
 
-    <section id="qigong">
-        <h3>Wat is Chi Neng Qigong?</h3>
-        <div class="about">
-            <p>Chi Neng Qigong is een eeuwenoude Chinese oefenmethode: een vorm van 'meditatie in beweging', die bestaat
-                uit trage, vloeiende bewegingen uitgevoerd met focus om de levensenergie (Qi) te laten stromen. Hierdoor
-                kalmeert het zenuwstelsel, vermindert stress, en verbeteren zowel de fysieke balans als de mentale
-                helderheid.</p>
-            <h4>Voor wie?</h4>
-            <p>De eenvoudige en zeer effectieve oefeningen zijn geschikt voor mensen van alle leeftijden en
-                gezondheidsniveaus. De oefeningen zijn extra geschikt bij burn-out, stressklachten, vermoeidheid of
-                lichamelijk herstel.
-            </p>
-        </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <h3>Contact</h3>
-        <div class="about">
-            <p>Voor vragen en aanmeldingen, stuur een mail naar: qigongmetcarla.nl</p>
-            <p>Adres Chiron instituut: Chiron Instituut, Hoefsmid 3, 1851 PZ, Heiloo.</p>
-        </div>
-        <!-- <form>
-        <input type="text" placeholder="Naam" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Bericht"></textarea>
-        <button class="btn" type="submit">Verstuur</button>
-    </form> -->
-    </section>
 
-    <footer>
-        © 2026 Qi Gong met Carla – Alle rechten voorbehouden
-    </footer>
-
+    </div>
+  </footer>
 </body>
 
-
 </html>
+
